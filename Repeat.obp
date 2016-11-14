@@ -1,4 +1,6 @@
 exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, message, event) {
+    require('./../Onebot.js').registerCmd('repeat <message>', 'Repeats the given message.');
+    require('./../Onebot.js').registerCmd('repeatspeech <message>', 'Repeats the given message with Text-to-Speech.');
     if(message === undefined){
         return;
     }
