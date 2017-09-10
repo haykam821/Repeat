@@ -1,7 +1,7 @@
 exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, message, event) {
-    require('./../exports.js').registerCmd('repeat <message>', 'Repeats the given message.');
-    require('./../exports.js').registerCmd('repeatspeech <message>', 'Repeats the given message with Text-to-Speech.');
-    require('./../exports.js').registerCmd('repeatto <channelID> <message>', 'Repeats the given message to another channel.');
+    require('./../exports.js').registerCmd(['repeat <message>'], 'Repeats the given message.');
+    require('./../exports.js').registerCmd(['repeatspeech <message>'], 'Repeats the given message with Text-to-Speech.');
+    require('./../exports.js').registerCmd(['repeatto <channelID> <message>'], 'Repeats the given message to another channel.');
     if(message === undefined){
         return;
     }
