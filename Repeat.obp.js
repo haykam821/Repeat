@@ -12,7 +12,7 @@ exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, 
         });
         bot.sendMessage({
             to: channelID,
-            message: message.match(/^.{8}(.*)/)[1]
+            message: '\u200b' + message.match(/^.{8}(.*)/)[1]
         });
     }
     if (message.startsWith(`${doc.prefix}repeatspeech `)) {
@@ -23,7 +23,7 @@ exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, 
         bot.sendMessage({
             to: channelID,
             tts: true,
-            message: message.match(/^.{14}(.*)/)[1]
+            message: '\u200b' + message.match(/^.{14}(.*)/)[1]
         });
     }
    if (message.startsWith(`${doc.prefix}repeatto `)) {
@@ -33,7 +33,7 @@ exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, 
         });
         bot.sendMessage({
             to: message.match(/^.{10}(.*)/)[1].split(" ")[0],
-            message: message.match(/^.{10}(.*)/)[1].split(" ").slice(1).join(" ")
+            message: '\u200b' + message.match(/^.{10}(.*)/)[1].split(" ").slice(1).join(" ")
         });
     }
 
