@@ -8,7 +8,7 @@ exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, 
     if (message.startsWith(`${doc.prefix}repeat `)) {
         bot.sendMessage({
             to: doc.logchannel,
-            message: `<@${userID} made bot repeat: \`${message.match(/^.{8}(.*)/)[1]}\``
+            message: `<@${userID}> made bot repeat: \`${message.match(/^.{8}(.*)/)[1]}\``
         });
         bot.sendMessage({
             to: channelID,
@@ -18,7 +18,7 @@ exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, 
     if (message.startsWith(`${doc.prefix}repeatspeech `)) {
         bot.sendMessage({
             to: doc.logchannel,
-            message: `<@${userID} made bot repeat with text-to-speech: \`${message.match(/^.{14}(.*)/)[1]}\``
+            message: `<@${userID}> made bot repeat with text-to-speech: \`${message.match(/^.{14}(.*)/)[1]}\``
         });
         bot.sendMessage({
             to: channelID,
@@ -29,7 +29,7 @@ exports.onMessageReceived = (function Repeat(bot, doc, user, userID, channelID, 
    if (message.startsWith(`${doc.prefix}repeatto `)) {
         bot.sendMessage({
             to: doc.logchannel,
-            message: `<@" + userID + "> made bot repeat in channel ID \`${message.match(/^.{10}(.*)/)[1].split(" ")[0]}\`: \`${message.match(/^.{10}(.*)/)[1].split(" ").slice(1).join(" ")}\``
+            message: `<@${userID}> made bot repeat in channel ID \`${message.match(/^.{10}(.*)/)[1].split(" ")[0]}\`: \`${message.match(/^.{10}(.*)/)[1].split(" ").slice(1).join(" ")}\``
         });
         bot.sendMessage({
             to: message.match(/^.{10}(.*)/)[1].split(" ")[0],
